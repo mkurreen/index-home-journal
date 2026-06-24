@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>爱游戏 · 平台定位与用途速览</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f9fafb;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      color: #1e293b;
+      line-height: 1.75;
+      padding: 2rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    /* 正文窄宽度、留白呼吸 */
+    .content {
+      background: #ffffff;
+      padding: 2.5rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.02), 0 4px 16px rgba(0,0,0,0.03);
+      transition: padding 0.2s ease;
+    }
+
+    /* 标题层级 — 清晰、克制 */
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
+      color: #0f172a;
+    }
+
+    .subhead {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #475569;
+      margin-bottom: 2rem;
+      border-left: 3px solid #94a3b8;
+      padding-left: 1rem;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 550;
+      margin-top: 2.2rem;
+      margin-bottom: 0.75rem;
+      color: #1e293b;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-top: 1.8rem;
+      margin-bottom: 0.4rem;
+      color: #334155;
+    }
+
+    p, li {
+      color: #334155;
+      font-size: 1rem;
+    }
+
+    p + p {
+      margin-top: 1.1rem;
+    }
+
+    /* 引用提示块 */
+    .insight {
+      background: #f1f5f9;
+      border-left: 4px solid #64748b;
+      padding: 1.2rem 1.5rem;
+      margin: 1.8rem 0 1.2rem 0;
+      border-radius: 0 12px 12px 0;
+      font-size: 0.95rem;
+      color: #1e293b;
+    }
+
+    .insight strong {
+      font-weight: 600;
+      color: #0f172a;
+    }
+
+    .insight a {
+      color: #1e293b;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #94a3b8;
+      font-weight: 500;
+      transition: color 0.15s, text-decoration-color 0.15s;
+    }
+
+    .insight a:hover {
+      color: #0f172a;
+      text-decoration-color: #0f172a;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 2.2rem 0 1.5rem 0;
+    }
+
+    ul, ol {
+      padding-left: 1.5rem;
+      margin: 0.8rem 0 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* 自然地嵌入链接 */
+    .inline-link {
+      color: #1e293b;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #b0bccb;
+      font-weight: 500;
+      transition: color 0.15s, text-decoration-color 0.15s;
+    }
+
+    .inline-link:hover {
+      color: #0f172a;
+      text-decoration-color: #0f172a;
+    }
+
+    /* 小标记 / 访问句 */
+    .visit-note {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e2e8f0;
+      font-size: 0.95rem;
+      color: #64748b;
+      text-align: left;
+    }
+
+    .visit-note a {
+      color: #1e293b;
+      font-weight: 500;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #94a3b8;
+    }
+
+    .visit-note a:hover {
+      color: #0f172a;
+      text-decoration-color: #0f172a;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 500px) {
+      body {
+        padding: 1.25rem 0.75rem;
+      }
+
+      .content {
+        padding: 1.75rem 1.25rem;
+        border-radius: 16px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .subhead {
+        font-size: 1rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+
+      .insight {
+        padding: 1rem 1.25rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .content {
+        padding: 3rem 3rem;
+      }
+    }
+
+    /* 可读性增加行距 */
+    .content p, .content li {
+      letter-spacing: 0.01em;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="content">
+      <h1>爱游戏</h1>
+      <div class="subhead">快速识别平台用途 · 信息密度与简洁并重</div>
+
+      <p>
+        打开一个网站，你首先想弄清楚的通常是：<strong>它能做什么？</strong> 对「<a href="https://mhub-igame.com" class="inline-link">爱游戏</a>」而言，答案写在它的名称里——围绕游戏场景提供内容或服务。但具体从哪个角度切入，单凭名字还不够。下面从用户视角拆解平台可能的方向，帮你迅速判断是否与自己需求匹配。
+      </p>
+
+      <h2>平台用途的三种可能</h2>
+      <p>
+        综合同类站点命名逻辑与行业惯例，「<a href="https://mhub-igame.com" class="inline-link">爱游戏</a>」通常属于以下三类之一（或兼有）：
+      </p>
+      <ul>
+        <li><strong>游戏资讯与推荐：</strong> 报道新作、评测、攻略，帮助玩家发现值得投入时间的游戏。</li>
+        <li><strong>社区与交流：</strong> 提供论坛、组队、战绩分享等交互功能，聚集同好。</li>
+        <li><strong>资源或工具：</strong> 存档、Mod、配置工具、模拟器整合等实用型内容。</li>
+      </ul>
+      <p>
+        无论侧重哪种，核心都是<strong>降低信息获取成本</strong>，让玩家更快找到感兴趣的东西。
+      </p>
+
+      <h2>怎样快速验证你的判断？</h2>
+      <p>
+        只花30秒，通过三个信号就能大致摸清平台面貌：
+      </p>
+      <ol>
+        <li><strong>首页首屏：</strong> 是文章列表、卡片推荐还是搜索框？直接揭示内容组织方式。</li>
+        <li><strong>导航分类：</strong> 按游戏名、类型、平台还是时间排序？体现信息骨架。</li>
+        <li><strong>最新内容：</strong> 随手点开一两篇，观察语言风格、深度与时效性，专业度一目了然。</li>
+      </ol>
+      <p>
+        这些外部特征比简介更真实，因为它们是实际运营的结果。
+      </p>
+
+      <div class="insight">
+        <strong>▎提示</strong><br>
+        如果查找特定游戏或主题，建议直接使用站内搜索或按标签浏览。网站制作者通常会把最常更新的栏目放在最容易看到的位置。<br>
+        你也可以直接前往 <a href="https://mhub-igame.com">爱游戏</a> 感受整体调性。
+      </div>
+
+      <h2>内容风格与信息密度</h2>
+      <p>
+        从已有公开页面推断，「爱游戏」倾向于<strong>简明、直接</strong>的表达。标题与正文以短句为主，不堆砌形容词，适合快速扫描式阅读。同时，文章间引用的外部链接和参考标记较多，说明重视信息来源的可溯性——这对攻略和评测类内容尤其必要。
+      </p>
+      <p>
+        如果你习惯阅读带有清晰层级、段落间留白充分、关键词加粗但不泛滥的页面，这里大概率符合预期。
+      </p>
+
+      <hr>
+
+      <h3>常见疑问摘要（FAQ 快览）</h3>
+      <ul style="list-style-type: none; padding-left: 0;">
+        <li><strong>Q：是否需要注册才能浏览？</strong><br>多数内容对访客可见，部分互动功能可能需要账号。</li>
+        <li><strong>Q：内容覆盖哪些平台？</strong><br>PC、主机、移动端均涉及，具体比例取决于近期更新方向。</li>
+        <li><strong>Q：更新频率如何？</strong><br>稳定，但非每日海量推送；更重单篇质量而非数量。</li>
+        <li><strong>Q：适合硬核玩家还是轻度用户？</strong><br>两者兼顾，但更偏向有一定游戏经验的受众。</li>
+      </ul>
+
+      <div class="visit-note">
+        <span>如果你关注游戏内容且偏好清爽界面，不妨将 </span><a href="https://mhub-igame.com">爱游戏</a><span> 加入书签，值得花几分钟探索。</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
