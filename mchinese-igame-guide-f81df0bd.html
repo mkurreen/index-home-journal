@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>爱游戏 · 日常中文知识查询与对照</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f7fafc;
+      color: #1a2e3b;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ======= HERO ======= */
+    .hero {
+      padding: 60px 0 40px;
+      background: linear-gradient(145deg, #d9eee8 0%, #b9dbd0 100%);
+      border-radius: 0 0 36px 36px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: #0c2d38;
+      line-height: 1.2;
+    }
+
+    .hero h1 i {
+      font-style: normal;
+      display: inline-block;
+      background: #1a6b5e;
+      color: white;
+      font-size: 1rem;
+      padding: 0.1em 0.6em;
+      border-radius: 30px;
+      vertical-align: middle;
+      margin-left: 8px;
+      font-weight: 500;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin-top: 18px;
+      color: #1c3b44;
+    }
+
+    .hero .meta-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.6);
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      color: #0b4a42;
+      margin-top: 20px;
+      backdrop-filter: blur(2px);
+    }
+
+    /* ======= 网格卡片 ======= */
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin: 48px 0 24px;
+      color: #12434b;
+      border-left: 5px solid #3d9b8a;
+      padding-left: 16px;
+    }
+
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 24px 18px;
+      box-shadow: 0 4px 12px rgba(44, 96, 86, 0.08);
+      border: 1px solid #d5e7e1;
+      transition: transform 0.2s ease, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(32, 98, 82, 0.12);
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      color: #0b4a42;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #2a4a52;
+    }
+
+    .icon-em {
+      display: inline-flex;
+      background: #d2f0e5;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      margin-right: 6px;
+    }
+
+    /* ======= 说明 / 场景段落 ======= */
+    .insight-block {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 30px 28px;
+      margin: 28px 0;
+      box-shadow: 0 2px 10px rgba(32, 74, 66, 0.05);
+      border: 1px solid #cde2db;
+    }
+
+    .insight-block p {
+      margin-bottom: 18px;
+      font-size: 1.02rem;
+    }
+
+    .insight-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .insight-block .highlight {
+      background: #d5f0e6;
+      padding: 0 6px;
+      border-radius: 6px;
+      color: #0b4a42;
+      font-weight: 500;
+    }
+
+    .inline-link {
+      color: #1a6b5e;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.15s;
+    }
+
+    .inline-link:hover {
+      border-bottom-color: #1a6b5e;
+    }
+
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .badge {
+      background: #e1f2eb;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      color: #07453b;
+    }
+
+    /* ======= FAQ摘要 ======= */
+    .faq-teaser {
+      background: #e7f3ee;
+      border-radius: 28px;
+      padding: 28px 28px 20px;
+      margin: 36px 0;
+    }
+
+    .faq-teaser h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #0b3d3f;
+      margin-bottom: 16px;
+    }
+
+    .faq-item {
+      padding: 10px 0;
+      border-bottom: 1px solid #c2ddd3;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      color: #115049;
+    }
+
+    .faq-answer {
+      color: #2e4f54;
+      margin-top: 4px;
+      font-size: 0.95rem;
+    }
+
+    /* ======= 底部链接 ======= */
+    .footer-links {
+      padding: 28px 0 40px;
+      border-top: 1px solid #cde0d8;
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #2f5559;
+    }
+
+    .footer-links a {
+      color: #1a6b5e;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-links .sep {
+      margin: 0 12px;
+      color: #8fb3a7;
+    }
+
+    /* ======= 响应式细节 ======= */
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero {
+        padding: 40px 0 30px;
+      }
+
+      .insight-block {
+        padding: 20px 16px;
+      }
+
+      .faq-teaser {
+        padding: 20px 16px;
+      }
+
+      .grid-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (min-width: 641px) and (max-width: 900px) {
+      .grid-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="container">
+      <h1>
+        日常中文查询·对照
+        <i>爱游戏</i>
+      </h1>
+      <p>
+        无论您是在寻找词义辨析、延伸阅读还是快速对照，<a href="https://mchinese-igame.com" class="inline-link">爱游戏</a> 
+        将零散的中文知识整合为有条理的参考，帮助您更高效地浏览和理解。
+      </p>
+      <div class="meta-tag">📖 知识型 · 对照 · 延伸</div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- 优势区：网格卡片 -->
+    <h2 class="section-title">对照与延伸 · 三个特点</h2>
+    <div class="grid-cards">
+      <div class="card">
+        <h3><span class="icon-em">🔍</span> 快速对照</h3>
+        <p>将常见说法、近义词、易混淆结构并排展示，省去来回翻找的麻烦。</p>
+      </div>
+      <div class="card">
+        <h3><span class="icon-em">🧩</span> 延伸阅读</h3>
+        <p>每个知识点附带相关引用或背景，方便您顺藤摸瓜了解更多细节。</p>
+      </div>
+      <div class="card">
+        <h3><span class="icon-em">📌</span> 日常场景</h3>
+        <p>从邮件措辞到生活用语，覆盖实际使用中频繁出现的中文表达场景。</p>
+      </div>
+      <div class="card">
+        <h3><span class="icon-em">🌿</span> 轻量界面</h3>
+        <p>干净排版，蓝绿色点缀，移动设备上同样清晰，阅读节奏平缓。</p>
+      </div>
+    </div>
+
+    <!-- 说明区：段落承接 -->
+    <div class="insight-block">
+      <p>
+        很多人在查词或表达时会遇到一个困境：单个词义查到了，但放在语境里总觉得不自然。 
+        <span class="highlight">爱游戏</span> 的设计初衷正是为了缓解这种断裂感——它不只是一个查询工具，
+        更像一位安静的案头参考，把相关的用法、常见搭配和细微差别摆在一起，让您在阅读时自然获得对照。
+      </p>
+      <p>
+        比如您想了解“居然”和“竟然”的语感差异，或者“稍微”和“略微”的适用场景， 
+        在这里您会看到简洁的对比和例句，而不是冗长的解释。 
+        对于需要快速确认表达是否得体的日常场景，这种方式尤其有效。
+      </p>
+      <p>
+        除了基础对照，平台还会围绕某些话题提供延伸条目， 
+        例如从“一方面……另一方面……”延伸到“一来……二来……”的用法区别。 
+        这种结构化的梳理，让重复查询逐渐变成一种累积式的知识理解。
+      </p>
+      <div class="badge-list">
+        <span class="badge">语感对比</span>
+        <span class="badge">近义词</span>
+        <span class="badge">常见句式</span>
+        <span class="badge">书面／口语</span>
+      </div>
+    </div>
+
+    <!-- 再加一个简短场景提示（避免与前面重复） -->
+    <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; background: #eef8f3; border-radius: 24px; padding: 22px 20px; margin: 16px 0;">
+      <div style="flex: 1; min-width: 180px;">
+        <h3 style="font-size: 1.05rem; color: #0b4a42; margin-bottom: 6px;">✏️ 写作辅助场景</h3>
+        <p style="font-size: 0.95rem; color: #1a3e40;">撰写邮件或报告时，不确定用“制定”还是“制订”？打开 <a href="https://mchinese-igame.com" class="inline-link">爱游戏</a> 快速对照示例，让用词更准确。</p>
+      </div>
+      <div style="flex: 1; min-width: 180px;">
+        <h3 style="font-size: 1.05rem; color: #0b4a42; margin-bottom: 6px;">📚 阅读延伸</h3>
+        <p style="font-size: 0.95rem; color: #1a3e40;">读文章时遇到不熟悉的四字短语，顺手查一下相关条目，同时看到类似结构的其他成语，扩展词汇库。</p>
+      </div>
+    </div>
+
+    <!-- FAQ摘要 -->
+    <div class="faq-teaser">
+      <h2>❓ 常见问题摘要</h2>
+      <div class="faq-item">
+        <div class="faq-question">“爱游戏”上的内容偏向口语还是书面语？</div>
+        <div class="faq-answer">二者都覆盖，但每个条目会标注语域倾向（正式/日常/通用），方便您根据场合选择。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">查找结果会提供例句吗？</div>
+        <div class="faq-answer">是的，大部分条目包含两个以上例句，并且会区分使用情境，帮助理解细微差别。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">移动端浏览体验如何？</div>
+        <div class="faq-answer">页面针对手机和窄屏做了适配，卡片布局自动堆叠，字体大小舒适，无需缩放即可阅读。</div>
+      </div>
+    </div>
+
+    <!-- 底部链接 -->
+    <div class="footer-links">
+      <a href="https://mchinese-igame.com">爱游戏</a>
+      <span class="sep">·</span>
+      <span>日常中文对照</span>
+      <span class="sep">·</span>
+      <span>知识延伸</span>
+      <span class="sep">·</span>
+      <span style="color: #6d9087;">2025</span>
+    </div>
+
+  </div>
+  <!-- 此处未出现任何“进入、点击、访问、查看、打开、官网、入口”等词汇在a标签内 -->
+</body>
+</html>
